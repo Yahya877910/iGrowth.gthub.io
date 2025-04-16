@@ -3,69 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bikini E-Commerce</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Shopee Clone</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        header {
+            background-color: #ff4d4d;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .product {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 10px;
+            margin: 10px;
+            text-align: center;
+            background-color: #fff;
+            transition: transform 0.2s;
+        }
+        .product:hover {
+            transform: scale(1.05);
+        }
+        .product img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+        .product h3 {
+            color: #333;
+        }
+        .product p {
+            color: #666;
+        }
+        .btn {
+            background-color: #ff4d4d;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #e60000;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #ff4d4d;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Bikini E-Commerce</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Beranda</a></li>
-                <li><a href="#products">Produk</a></li>
-                <li><a href="#about">Tentang Kami</a></li>
-                <li><a href="#contact">Kontak</a></li>
-                <li><a href="#cart">Keranjang</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main>
-        <section id="home">
-            <h2>Selamat Datang di Bikini E-Commerce!</h2>
-            <p>Temukan koleksi bikini terbaru kami untuk musim panas ini.</p>
-        </section>
+<header>
+    <h1>Selamat Datang di Shopee Clone</h1>
+</header>
 
-        <section id="products">
-            <h2>Produk Kami</h2>
-            <div class="product">
-                <img src="https://example.com/images/bikini1.jpg" alt="Bikini Model 1">
-                <h3>Bikini Model 1</h3>
-                <p>Harga: Rp 250.000</p>
-                <button>Tambah ke Keranjang</button>
-            </div>
-            <div class="product">
-                <img src="https://example.com/images/bikini2.jpg" alt="Bikini Model 2">
-                <h3>Bikini Model 2</h3>
-                <p>Harga: Rp 300.000</p>
-                <button>Tambah ke Keranjang</button>
-            </div>
-            <div class="product">
-                <img src="https://example.com/images/bikini3.jpg" alt="Bikini Model 3">
-                <h3>Bikini Model 3</h3>
-                <p>Harga: Rp 350.000</p>
-                <button>Tambah ke Keranjang</button>
-            </div>
-        </section>
+<div class="container">
+    <h2>Produk Terbaru</h2>
+    <div class="product">
+        <img src="https://via.placeholder.com/150" alt="Produk 1">
+        <h3>Produk 1</h3>
+        <p>Harga: Rp 100.000</p>
+        <button class="btn" onclick="addToCart('Produk 1', 100000)">Tambah ke Keranjang</button>
+    </div>
+    <div class="product">
+        <img src="https://via.placeholder.com/150" alt="Produk 2">
+        <h3>Produk 2</h3>
+        <p>Harga: Rp 200.000</p>
+        <button class="btn" onclick="addToCart('Produk 2', 200000)">Tambah ke Keranjang</button>
+    </div>
+    <div class="product">
+        <img src="https://via.placeholder.com/150" alt="Produk 3">
+        <h3>Produk 3</h3>
+        <p>Harga: Rp 150.000</p>
+        <button class="btn" onclick="addToCart('Produk 3', 150000)">Tambah ke Keranjang</button>
+    </div>
+</div>
 
-        <section id="about">
-            <h2>Tentang Kami</h2>
-            <p>Kami menyediakan bikini berkualitas tinggi dengan desain yang menarik.</p>
-        </section>
+<footer>
+    <p>&copy; 2023 Shopee Clone. Semua hak dilindungi.</p>
+</footer>
 
-        <section id="contact">
-            <h2>Kontak Kami</h2>
-            <p>Email: support@example.com</p>
-        </section>
+<script>
+    function addToCart(productName, price) {
+        alert(productName + ' telah ditambahkan ke keranjang Anda. Harga: Rp ' + price);
+    }
+</script>
 
-        <section id="cart">
-            <h2>Keranjang Belanja</h2>
-            <p>Daftar produk yang telah ditambahkan.</p>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2025 Bikini E-Commerce. Semua hak dilindungi.</p>
-    </footer>
 </body>
-</html> 
+</html>
